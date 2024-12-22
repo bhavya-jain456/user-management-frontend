@@ -1,0 +1,101 @@
+/* General reset and full-screen setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Centered registration form container */
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Form styling */
+  .form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Increase max-width for larger form */
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Input fields styling */
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 15px; /* Larger input fields */
+    margin-bottom: 1.5rem; /* Space between fields */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #4f73df; /* Focused input border color */
+  }
+  
+  /* Button styling */
+  button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    background-color: #4f73df; /* Primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3a5cb2; /* Darker shade for hover */
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 480px) {
+    .form-container {
+      padding: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    input[type="text"],
+    input[type="email"] {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    button[type="submit"] {
+      padding: 14px;
+      font-size: 1rem;
+    }
+  }
+  

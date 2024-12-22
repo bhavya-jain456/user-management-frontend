@@ -1,0 +1,164 @@
+/* Profile container to take up the full screen */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Center the profile card horizontally */
+    align-items: flex-start; /* Align the profile card to the top */
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;               /* Take full width of the screen */
+}
+
+/* Profile card takes full screen height */
+.profile-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;               /* Make the profile card take up the full width */
+    max-width: 100%;           /* Allow it to stretch across the full screen */
+    height: auto; /* Let the height adjust based on content */
+    min-height: 80vh; /* Ensure the card has a minimum height */
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Heading for the profile */
+.profile-heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;  /* Ensures that the heading stretches across the full width */
+}
+
+/* Profile details */
+.profile-details {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.profile-details p {
+    margin: 10px 0;
+}
+
+/* Profile image section */
+.profile-image-container {
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Profile image */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin-bottom: 15px;
+}
+
+/* Bio text area */
+.bio-section {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.bio-textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: none;
+    font-size: 16px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+.bio-textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.file-input-container {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.file-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.update-btn:hover {
+    background-color: #45a049;
+}
+
+.update-btn:active {
+    background-color: #3e8e41;
+}
+
+/* Add a smooth transition effect for the profile card */
+.profile-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust layout for smaller devices */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-heading {
+        font-size: 24px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .bio-textarea {
+        height: 120px;
+        font-size: 14px;
+    }
+
+    .file-input, .update-btn {
+        font-size: 14px;
+    }
+}

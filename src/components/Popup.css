@@ -1,0 +1,31 @@
+/* Default Popup Styling */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(240, 23, 23, 0.849); /* Red background for error */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    min-width: 200px; /* Minimum width to ensure it doesn't get too small */
+    max-width: 500px; /* Maximum width to prevent it from becoming too wide */
+    height: auto; /* Adjust height based on the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    word-wrap: break-word; /* Break long words to fit within the box */
+  }  
+  
+  /* Error Popup Styling */
+  .popup.error {
+    background-color: red; /* Red background for errors */
+  }
+  
+  /* Success Popup Styling (Optional, in case you need a different style for success messages) */
+  .popup.success {
+    background-color: green; /* Green background for success */
+  }
+  

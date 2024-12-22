@@ -1,0 +1,37 @@
+.user-videos-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.video-list {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 20px;  /* Space between items */
+}
+
+.video-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;  /* Take full width of the container */
+    max-width: 720px;  /* Optional, limit the width of each item */
+    margin: 0 auto;  /* Center align the video items */
+}
+
+.video-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.video-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+video {
+    width: 100%;  /* Make the video player responsive */
+    max-width: 100%;  /* Ensure it doesn't overflow */
+    height: auto;  /* Maintain aspect ratio */
+}
