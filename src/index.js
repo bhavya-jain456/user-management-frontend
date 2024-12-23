@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Register from './components/Register';
@@ -10,7 +10,20 @@ import UserVideos from './components/UserVideos';
 import './index.css';
 
 const App = () => {
-  const isAuthenticated = localStorage.getItem('userDetails') && localStorage.getItem('token');
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    localStorage.getItem('userDetails') && localStorage.getItem('token')
+  );
+
+  useEffect(() => {
+    const updateAuthStatus = () => {
+      setIsAuthenticated(
+        localStorage.getItem('userDetails') && localStorage.getItem('token')
+      );
+    };
+
+    window.addEventListener('storage', updateAuthStatus); // Listen for changes in localStorage
+    return () => window.removeEventListener('storage', updateAuthStatus);
+  }, []);
 
   return (
     <>
@@ -21,7 +34,7 @@ const App = () => {
           <Route path="/" element={<Navigate to={isAuthenticated ? "/profile" : "/login"} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={isAuthenticated ? <Profile /> : <Navigate to="/login" />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/users" element={<Users />} />
           {/* Updated the route to match userId */}
           <Route path="/user-videos/:userId" element={<UserVideos />} />
